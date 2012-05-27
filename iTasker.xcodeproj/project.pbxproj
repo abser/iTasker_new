@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041849391571D9F2006AFF79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041849381571D9F2006AFF79 /* UIKit.framework */; };
+		0418493B1571D9F2006AFF79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0418493A1571D9F2006AFF79 /* Foundation.framework */; };
+		0418493D1571D9F2006AFF79 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0418493C1571D9F2006AFF79 /* CoreGraphics.framework */; };
+		041849431571D9F2006AFF79 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 041849411571D9F2006AFF79 /* InfoPlist.strings */; };
+		041849451571D9F2006AFF79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 041849441571D9F2006AFF79 /* main.m */; };
+		041849491571D9F2006AFF79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 041849481571D9F2006AFF79 /* AppDelegate.m */; };
+		0418494C1571D9F2006AFF79 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0418494B1571D9F2006AFF79 /* FirstViewController.m */; };
+		0418494E1571D9F2006AFF79 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418494D1571D9F2006AFF79 /* first.png */; };
+		041849501571D9F2006AFF79 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0418494F1571D9F2006AFF79 /* first@2x.png */; };
+		041849531571D9F2006AFF79 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041849521571D9F2006AFF79 /* SecondViewController.m */; };
+		041849551571D9F2006AFF79 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 041849541571D9F2006AFF79 /* second.png */; };
+		041849571571D9F2006AFF79 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041849561571D9F2006AFF79 /* second@2x.png */; };
+		0418495A1571D9F2006AFF79 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041849581571D9F2006AFF79 /* FirstViewController.xib */; };
+		0418495D1571D9F2006AFF79 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0418495B1571D9F2006AFF79 /* SecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		041849341571D9F2006AFF79 /* iTasker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTasker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		041849381571D9F2006AFF79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0418493A1571D9F2006AFF79 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0418493C1571D9F2006AFF79 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		041849401571D9F2006AFF79 /* iTasker-Info.plist */ = {isa = PBXFileReference; path = "iTasker-Info.plist"; sourceTree = "<group>"; };
+		041849421571D9F2006AFF79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		041849441571D9F2006AFF79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		041849461571D9F2006AFF79 /* iTasker-Prefix.pch */ = {isa = PBXFileReference; path = "iTasker-Prefix.pch"; sourceTree = "<group>"; };
+		041849471571D9F2006AFF79 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		041849481571D9F2006AFF79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0418494A1571D9F2006AFF79 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		0418494B1571D9F2006AFF79 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		0418494D1571D9F2006AFF79 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		0418494F1571D9F2006AFF79 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		041849511571D9F2006AFF79 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		041849521571D9F2006AFF79 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		041849541571D9F2006AFF79 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		041849561571D9F2006AFF79 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		041849591571D9F2006AFF79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
+		0418495C1571D9F2006AFF79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		041849311571D9F2006AFF79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041849391571D9F2006AFF79 /* UIKit.framework in Frameworks */,
+				0418493B1571D9F2006AFF79 /* Foundation.framework in Frameworks */,
+				0418493D1571D9F2006AFF79 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		041849291571D9F2006AFF79 = {
+			isa = PBXGroup;
+			children = (
+				0418493E1571D9F2006AFF79 /* iTasker */,
+				041849371571D9F2006AFF79 /* Frameworks */,
+				041849351571D9F2006AFF79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		041849351571D9F2006AFF79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				041849341571D9F2006AFF79 /* iTasker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		041849371571D9F2006AFF79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				041849381571D9F2006AFF79 /* UIKit.framework */,
+				0418493A1571D9F2006AFF79 /* Foundation.framework */,
+				0418493C1571D9F2006AFF79 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0418493E1571D9F2006AFF79 /* iTasker */ = {
+			isa = PBXGroup;
+			children = (
+				041849471571D9F2006AFF79 /* AppDelegate.h */,
+				041849481571D9F2006AFF79 /* AppDelegate.m */,
+				0418494A1571D9F2006AFF79 /* FirstViewController.h */,
+				0418494B1571D9F2006AFF79 /* FirstViewController.m */,
+				0418494D1571D9F2006AFF79 /* first.png */,
+				0418494F1571D9F2006AFF79 /* first@2x.png */,
+				041849511571D9F2006AFF79 /* SecondViewController.h */,
+				041849521571D9F2006AFF79 /* SecondViewController.m */,
+				041849541571D9F2006AFF79 /* second.png */,
+				041849561571D9F2006AFF79 /* second@2x.png */,
+				041849581571D9F2006AFF79 /* FirstViewController.xib */,
+				0418495B1571D9F2006AFF79 /* SecondViewController.xib */,
+				0418493F1571D9F2006AFF79 /* Supporting Files */,
+			);
+			path = iTasker;
+			sourceTree = "<group>";
+		};
+		0418493F1571D9F2006AFF79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				041849401571D9F2006AFF79 /* iTasker-Info.plist */,
+				041849411571D9F2006AFF79 /* InfoPlist.strings */,
+				041849441571D9F2006AFF79 /* main.m */,
+				041849461571D9F2006AFF79 /* iTasker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		041849331571D9F2006AFF79 /* iTasker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041849601571D9F2006AFF79 /* Build configuration list for PBXNativeTarget "iTasker" */;
+			buildPhases = (
+				041849301571D9F2006AFF79 /* Sources */,
+				041849311571D9F2006AFF79 /* Frameworks */,
+				041849321571D9F2006AFF79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iTasker;
+			productName = iTasker;
+			productReference = 041849341571D9F2006AFF79 /* iTasker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0418492B1571D9F2006AFF79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "abser@zingmobile.com";
+			};
+			buildConfigurationList = 0418492E1571D9F2006AFF79 /* Build configuration list for PBXProject "iTasker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 041849291571D9F2006AFF79;
+			productRefGroup = 041849351571D9F2006AFF79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				041849331571D9F2006AFF79 /* iTasker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		041849321571D9F2006AFF79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041849431571D9F2006AFF79 /* InfoPlist.strings in Resources */,
+				0418494E1571D9F2006AFF79 /* first.png in Resources */,
+				041849501571D9F2006AFF79 /* first@2x.png in Resources */,
+				041849551571D9F2006AFF79 /* second.png in Resources */,
+				041849571571D9F2006AFF79 /* second@2x.png in Resources */,
+				0418495A1571D9F2006AFF79 /* FirstViewController.xib in Resources */,
+				0418495D1571D9F2006AFF79 /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		041849301571D9F2006AFF79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041849451571D9F2006AFF79 /* main.m in Sources */,
+				041849491571D9F2006AFF79 /* AppDelegate.m in Sources */,
+				0418494C1571D9F2006AFF79 /* FirstViewController.m in Sources */,
+				041849531571D9F2006AFF79 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		041849411571D9F2006AFF79 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041849421571D9F2006AFF79 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		041849581571D9F2006AFF79 /* FirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041849591571D9F2006AFF79 /* en */,
+			);
+			name = FirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		0418495B1571D9F2006AFF79 /* SecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0418495C1571D9F2006AFF79 /* en */,
+			);
+			name = SecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0418495E1571D9F2006AFF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0418495F1571D9F2006AFF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		041849611571D9F2006AFF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iTasker/iTasker-Prefix.pch";
+				INFOPLIST_FILE = "iTasker/iTasker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		041849621571D9F2006AFF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iTasker/iTasker-Prefix.pch";
+				INFOPLIST_FILE = "iTasker/iTasker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0418492E1571D9F2006AFF79 /* Build configuration list for PBXProject "iTasker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0418495E1571D9F2006AFF79 /* Debug */,
+				0418495F1571D9F2006AFF79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041849601571D9F2006AFF79 /* Build configuration list for PBXNativeTarget "iTasker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041849611571D9F2006AFF79 /* Debug */,
+				041849621571D9F2006AFF79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0418492B1571D9F2006AFF79 /* Project object */;
+}
