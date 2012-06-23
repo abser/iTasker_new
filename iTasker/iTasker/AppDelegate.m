@@ -10,28 +10,19 @@
 //#import "FirstPageController.h"
 #import "LoginController.h"
 #import "BrowseTaskController.h"
-//#import "BrowseTaskWithCustomCell.h"
 #import "PostTaskController.h"
 #import "WatchTaskcontroller.h"
 #import "TaskPosterMessageController.h"
-#import "AccountsController.h"
-#import "LoginModel.h"
-
-static NSString* APP_ID = @"300862099993835";
-
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
-@synthesize facebook;
-
 
 - (void)dealloc
 {
     [_window release];
     [_tabBarController release];
-    [facebook release];
     [super dealloc];
 }
 
@@ -39,17 +30,11 @@ static NSString* APP_ID = @"300862099993835";
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    
-     LoginController *loginController = [[[LoginController alloc]initWithNibName:@"LoginView" bundle:nil] autorelease];
-    facebook =  [[Facebook alloc]initWithAppId:APP_ID andDelegate:loginController];
-
 
     //POST TASK CONTROLLER   
     UIViewController *postTaskController = [[[PostTaskController alloc] initWithNibName:@"PostTaskView" bundle:nil] autorelease];
     
     UINavigationController *postTaskNavController = [[[UINavigationController alloc] initWithRootViewController:postTaskController] autorelease];
-    
-    //postTaskNavController.navigationBar.barStyle = UIBarStyleBlack;
     
     
     // WATCH TASK CONTROLLER
@@ -57,108 +42,49 @@ static NSString* APP_ID = @"300862099993835";
     
     UINavigationController *watchTaskNavController = [[[UINavigationController alloc] initWithRootViewController:watchTaskController] autorelease];
     
-    //watchTaskNavController.navigationBar.barStyle = UIBarStyleBlack;
     
-    
-    // BROWSE TASK CONTROLL
+    // BROWSE TASK CONTROLLER
     UIViewController *browseTaskController = [[[BrowseTaskController alloc] initWithNibName:@"BrowseTaskView" bundle:nil] autorelease];
-    
-    
-    
-    UINavigationController *browseTaskNavController = [[[UINavigationController alloc] initWithRootViewController:browseTaskController] autorelease];
-    
-    //browseTaskNavController.navigationBar.barStyle = UIBarStyleBlack;
     
     //MESSAGE CONTROLLER
     UIViewController *taskPosterMessageController = [[[TaskPosterMessageController alloc] initWithNibName:@"TaskPosterMessageView" bundle:nil] autorelease];
     
-    //ACCOUNT CONTROLLER
-    UIViewController *accountsController = [[[AccountsController alloc]initWithNibName:@"AccountsView" bundle:nil] autorelease];
-    
-    UINavigationController *accountNavController = [[[UINavigationController alloc] initWithRootViewController:accountsController] autorelease];
-    
-    //accountNavController.navigationBar.barStyle = UIBarStyleBlack;
-    
     // INITILIZE AND ADDITING TO TAB BAR CONTROLLER
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:watchTaskNavController, postTaskNavController, browseTaskNavController , taskPosterMessageController, accountNavController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:postTaskNavController, watchTaskNavController, browseTaskController , taskPosterMessageController, nil];
     
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+    //[self performSelector:(showFirstPage) withObject:nil afterDelay:0];
     
     /* Present next run loop. Prevents "unbalanced VC display" warnings. */
     double delayInSeconds = 0.1;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-     
-             
-    //CHECK KEYCHAIN FOR LOGIN DATA
-    NSArray *loginData = [LoginModel getLoginData];
-    if([[loginData objectAtIndex:0] isEqualToString:@""])
-    {
-    // Check for facebook token
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        if ([defaults objectForKey:@"FBAccessTokenKey"] 
-            && [defaults objectForKey:@"FBExpirationDateKey"]) 
-        {
-            NSLog(@"Previous FB Token Found!");
-        facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-        // Check for valid session
-            if (![facebook isSessionValid]) 
-            {
-                [self showLoginPage];
-                NSLog(@"Not a Valid session!");
-                //[facebook authorize:nil];
-            }
-
-            }
-            else
-            {
-                // Facebook login data not found
-                NSLog(@"No FB Token found!");
-            [self showLoginPage];
-            }
-            
-        }
-        else
-        {
-        //LOGIN USER TO THE SERVER
-         NSString *response =   [LoginModel sendLoginToServer:[loginData objectAtIndex:0] pass:[loginData objectAtIndex:1]];
-            //DECIDE ON LOGIN RESPONSE
-            if([response isEqualToString:@"NOK"])
-            {
-                [self showLoginPage];
-            }
-            else
-            {
-                
-            }
-            
-        }
-    
         
         
+        // PUSH First Page
+        LoginController *loginController = [[[LoginController alloc]initWithNibName:@"LoginView" bundle:nil] autorelease];
+        
+        
+        [self.tabBarController presentModalViewController:loginController animated:YES];
     });
 
+    
+    
     return YES;
 }
-
-- (void) showLoginPage
+/*
+- (void) showFirstPage
 {
-    //SHWO LOGIN PAGE
-    LoginController *loginController = [[[LoginController alloc]initWithNibName:@"LoginView" bundle:nil] autorelease];
-    
-    loginController.title = @"iTasker Login";
-    UINavigationController *loginNav = [[[UINavigationController alloc] initWithRootViewController:loginController] autorelease];
+    // PUSH First Page
+    FirstPageController *firstPageController = [[[FirstPageController alloc]initWithNibName:@"FirstPageView" bundle:nil] autorelease];
     
     
-    [self.tabBarController presentModalViewController:loginNav animated:YES];
+    [self.tabBarController presentModalViewController:firstPageController animated:YES];
 }
-
-
-
+*/
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
@@ -187,7 +113,6 @@ static NSString* APP_ID = @"300862099993835";
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-    //[[self facebook] extendAccessTokenIfNeeded];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -212,15 +137,5 @@ static NSString* APP_ID = @"300862099993835";
 {
 }
 */
-
-
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [self.facebook handleOpenURL:url];
-}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [self.facebook handleOpenURL:url];
-}
-
 
 @end
