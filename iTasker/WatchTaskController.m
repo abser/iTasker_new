@@ -1,28 +1,29 @@
 //
-//  FirstViewController.m
+//  WatchTaskController.m
 //  iTasker
 //
-//  Created by Nurul Abser on 27/5/12.
+//  Created by Nurul Abser on 23/6/12.
 //  Copyright (c) 2012 abser@zingmobile.com. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "WatchTaskController.h"
 
-@implementation FirstViewController
+@implementation WatchTaskController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        // Custom initialization
     }
     return self;
 }
-							
+
 - (void)didReceiveMemoryWarning
 {
+    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
+    
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -31,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
@@ -41,30 +42,10 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end
